@@ -11,7 +11,7 @@ interface MiddleBlockProps {
   t: any;
 }
 
-const MiddleBlock = ({ title, content, button, t }: MiddleBlockProps) => {
+const MiddleBlock = ({ title, content }: MiddleBlockProps) => {
   const scrollTo = (id: string) => {
     const element = document.getElementById(id) as HTMLDivElement;
     element.scrollIntoView({
@@ -21,18 +21,10 @@ const MiddleBlock = ({ title, content, button, t }: MiddleBlockProps) => {
   return (
     <MiddleBlockSection>
       <Slide direction="up">
-        <Row justify="center" align="middle">
-          <ContentWrapper>
-            <Col lg={24} md={24} sm={24} xs={24}>
-              <h6>{t(title)}</h6>
-              <Content>{t(content)}</Content>
-              {button && (
-                <Button name="submit" onClick={() => scrollTo("mission")}>
-                  {t(button)}
-                </Button>
-              )}
-            </Col>
-          </ContentWrapper>
+        <Row justify="center" align="center" flex-direction="row">
+              <h2>{title}</h2>
+              <Content>{content}</Content>
+      
         </Row>
       </Slide>
     </MiddleBlockSection>

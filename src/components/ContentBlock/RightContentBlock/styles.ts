@@ -23,6 +23,7 @@ export const ContentWrapper = styled("div")`
 
   @media only screen and (max-width: 575px) {
     padding-bottom: 4rem;
+    text-align: center;
   }
 `;
 
@@ -31,11 +32,12 @@ export const ButtonWrapper = styled("div")`
   justify-content: space-between;
   max-width: 100%;
 
-  @media screen and (min-width: 1024px) {
-    max-width: 80%;
+  @media screen and (max-width: 512px) {
+    justify-content: center;
+  
   }
 
   button:last-child {
-    margin-left: 20px;
+    margin-left: 0;
   }
 `;

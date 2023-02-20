@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { notification } from "antd";
-import axios from "axios";
+import emailjs from "emailjs-com";
 
 export const useForm = (validate: any) => {
   const [values, setValues] = useState({});
@@ -17,17 +17,26 @@ export const useForm = (validate: any) => {
   const handleSubmit = (event: React.ChangeEvent<HTMLFormElement>) => {
     event.preventDefault();
     setErrors(validate(values));
-    // Your url for API
-    const url = "";
-    if (Object.keys(values).length === 3) {
-      axios
-        .post(url, {
-          ...values,
-        })
-        .then(() => {
-          setShouldSubmit(true);
-        });
-    }
+
+    const templateParams = {
+      from_name: values.name,
+      from_email: values.email,
+      message: values.message,
+    };
+
+    emailjs
+      .send(
+        "service_test1",
+        "template_cti1gfj",
+        templateParams,
+        "FDgipbD-bbODkhERA"
+      )
+      .then(() => {
+        setShouldSubmit(true);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   useEffect(() => {

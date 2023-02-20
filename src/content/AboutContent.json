@@ -1,16 +1,4 @@
 {
-  "title": "Light, fast & responsive",
-  "text": "This template is ready to use, so you don't need to change anything at a component level, unless you want to customize the default styling.",
-  "section": [
-    {
-      "title": "Why Antd?",
-      "content": "Ant Design is a React UI library that has a lot of easy-to-use components for building elegant UI.",
-      "icon": "notes.svg"
-    },
-    {
-      "title": "Why styled-components?",
-      "content": "Styled Components gives you total control over your components.",
-      "icon": "notes.svg"
-    }
-  ]
+  "title": "MGR. LUDĚK DVOŘÁK",
+  "text": "Jsem samostatný advokát, který se v oblasti advokacie pohybuje od roku 2003 a od roku 2007 provozuji soukromou advokátní praxi. Zaměřuji se na poskytování právního zastoupení poškozeným v trestním i civilním řízení. Jsem veden i v registru poskytovatelů právní pomoci obětem trestných činů. Zastoupení je prováděno komplexně jak v trestním řízení vedeném u Policie České republiky, tak i v řízení před soudem s uplatněním nároku na náhradu škody způsobené trestným činem.  Poskytuji služby jak ve své kanceláři, tak po dohodě s klienty přímo u klientů. Přizpůsobím se Vašim časovým možnostem. "
 }

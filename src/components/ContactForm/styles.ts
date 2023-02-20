@@ -31,6 +31,8 @@ export const ButtonContainer = styled("div")`
   position: relative;
 
   @media only screen and (max-width: 414px) {
-    padding-top: 0.75rem;
+    padding-top: 1.75rem;
+    display: flex;
+    justify-content: center;
   }
 `;

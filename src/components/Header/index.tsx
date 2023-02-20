@@ -16,6 +16,12 @@ import {
   Span,
 } from "./styles";
 
+
+  const handleClick = () => {
+    window.location.href = "tel:1234567890";
+  }
+
+
 const Header = ({ t }: any) => {
   const [visible, setVisibility] = useState(false);
 
@@ -35,23 +41,19 @@ const Header = ({ t }: any) => {
       });
       setVisibility(false);
     };
+
+    
     return (
       <>
         <CustomNavLinkSmall onClick={() => scrollTo("about")}>
-          <Span>{t("About")}</Span>
+          <Span>{t("O mne")}</Span>
         </CustomNavLinkSmall>
-        <CustomNavLinkSmall onClick={() => scrollTo("mission")}>
-          <Span>{t("Mission")}</Span>
-        </CustomNavLinkSmall>
-        <CustomNavLinkSmall onClick={() => scrollTo("product")}>
-          <Span>{t("Product")}</Span>
-        </CustomNavLinkSmall>
-        <CustomNavLinkSmall
+                <CustomNavLinkSmall
           style={{ width: "180px" }}
           onClick={() => scrollTo("contact")}
         >
           <Span>
-            <Button>{t("Contact")}</Button>
+            <Button onClick={handleClick}>{t("Volat 1234567890")}</Button>
           </Span>
         </CustomNavLinkSmall>
       </>
@@ -72,19 +74,7 @@ const Header = ({ t }: any) => {
             <Outline />
           </Burger>
         </Row>
-        <Drawer closable={false} visible={visible} onClose={onClose}>
-          <Col style={{ marginBottom: "2.5rem" }}>
-            <Label onClick={onClose}>
-              <Col span={12}>
-                <Menu>Menu</Menu>
-              </Col>
-              <Col span={12}>
-                <Outline />
-              </Col>
-            </Label>
-          </Col>
-          <MenuItem />
-        </Drawer>
+      
       </Container>
     </HeaderSection>
   );
